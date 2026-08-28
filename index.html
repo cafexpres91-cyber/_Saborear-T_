@@ -1,70 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#6b963c">
-<meta name="description" content="Saborear-T: menú, pedidos, Instagram, ubicación y reseñas.">
-<title>Saborear-T | Sabor que te hace volver</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#5f8f31">
+<title>Saborear-T | Tarjeta Digital</title>
 <style>
-:root{--green:#6b963c;--dark:#4d7627;--soft:#edf4e5;--brown:#7d5b30;--cream:#fbfaf5;--text:#332b22}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);
-background:radial-gradient(circle at 10% 5%,rgba(107,150,60,.1),transparent 25%),radial-gradient(circle at 90% 20%,rgba(125,91,48,.08),transparent 24%),var(--cream)}
-.page{width:min(100%,620px);margin:auto;min-height:100vh;padding:18px}
-.hero{position:relative;overflow:hidden;border-radius:32px;background:linear-gradient(145deg,#fff,#f6f7ef);
-box-shadow:0 14px 35px rgba(73,58,37,.12);padding:30px 22px 24px;text-align:center;border:1px solid rgba(107,150,60,.16)}
-.hero:before,.hero:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:rgba(107,150,60,.08)}
-.hero:before{left:-70px;top:-70px}.hero:after{right:-80px;bottom:-80px}.hero>*{position:relative;z-index:1}
-.logo{width:150px;height:150px;object-fit:contain;margin:0 auto 8px;display:block}
-.eyebrow{color:var(--brown);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin:2px 0 8px}
-h1{margin:0;color:var(--dark);font-size:clamp(2rem,9vw,3rem);letter-spacing:-.045em;line-height:.98}
-.tagline{margin:12px auto 0;max-width:430px;color:#665c50;line-height:1.5;font-size:1rem}
-.location-pill{display:inline-flex;align-items:center;gap:7px;margin-top:18px;padding:9px 14px;border-radius:999px;background:var(--soft);color:var(--dark);font-size:.85rem;font-weight:750}
-.actions{display:grid;gap:13px;margin-top:20px}
-.card{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text);background:#fff;border:1px solid rgba(125,91,48,.13);
-border-radius:22px;padding:15px;box-shadow:0 7px 20px rgba(73,58,37,.07);transition:.18s ease}
-.card:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(73,58,37,.12)}
-.icon{flex:0 0 52px;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.5rem;background:var(--soft)}
-.google .icon{background:#f4eee5}.instagram .icon{background:#f8e8ef}
-.copy{text-align:left;min-width:0;flex:1}.copy strong{display:block;font-size:1.03rem;margin-bottom:3px}
-.copy span{display:block;color:#786f64;font-size:.84rem;line-height:1.3}.arrow{font-size:1.25rem;color:var(--dark);font-weight:800}
-.section-title{margin:28px 4px 12px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brown);font-weight:850}
-.info{background:#fff;border-radius:24px;padding:18px;box-shadow:0 14px 35px rgba(73,58,37,.12);border:1px solid rgba(107,150,60,.12)}
-.info-row{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #eee9e0}.info-row:last-child{border-bottom:0}
-.info-icon{width:30px;text-align:center}.info strong{display:block;font-size:.9rem;margin-bottom:2px}
-.info span,.info a{font-size:.88rem;color:#746b61;text-decoration:none;line-height:1.4}
-.footer{text-align:center;padding:25px 10px 10px;color:#786f64;font-size:.78rem;line-height:1.5}
-.brand{color:var(--dark);font-weight:900;letter-spacing:.04em}
-@media(max-width:390px){.page{padding:10px}.hero{padding:25px 15px 20px}.logo{width:125px;height:125px}}
+:root{--g:#6b963c;--gd:#4f7d27;--gs:#eaf3df;--b:#7d5b30;--bg:#faf8f1;--ink:#30291f;--m:#746b60}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 0 0,#e4efd8,transparent 30%),radial-gradient(circle at 100% 20%,#eee5d8,transparent 27%),var(--bg);font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink)}
+.wrap{max-width:680px;margin:auto;padding:12px 12px 88px}.hero{background:linear-gradient(145deg,#fff,#f2f6eb);border:1px solid #dce8cf;border-radius:32px;padding:28px 18px 23px;text-align:center;box-shadow:0 16px 40px #473a201f}.logo{width:145px;height:145px;object-fit:contain;display:block;margin:auto}
+.k{margin-top:7px;color:var(--b);font-size:.72rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase}h1{margin:7px 0 3px;color:var(--gd);font-size:clamp(2.3rem,11vw,3.4rem);line-height:.95;letter-spacing:-.05em}.s{color:var(--b);font-weight:800}.a{color:var(--m);font-size:.82rem}
+.note{display:flex;gap:12px;text-align:left;align-items:center;margin:19px auto 0;max-width:540px;background:#ffffffcc;border:1px solid #dfe9d4;border-radius:18px;padding:13px}.note b{display:block;font-size:.9rem}.note span{font-size:.77rem;color:var(--m)}
+.t{margin:27px 3px 10px;color:var(--b);font-size:.73rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.actions{display:grid;gap:11px}.action{display:flex;align-items:center;gap:13px;padding:13px 14px;background:#fff;border:1px solid #e5ded3;border-radius:20px;text-decoration:none;color:var(--ink);box-shadow:0 8px 22px #473a2012}.primary{background:linear-gradient(135deg,var(--g),var(--gd));color:#fff;border:0}.ico{width:48px;height:48px;flex:0 0 48px;border-radius:15px;background:var(--gs);display:grid;place-items:center;font-size:1.4rem}.primary .ico{background:#ffffff2e}.txt{flex:1}.txt b{display:block;font-size:.94rem}.txt span{display:block;color:var(--m);font-size:.76rem;margin-top:2px}.primary .txt span{color:#ffffffd9}.ar{font-size:1.35rem;font-weight:900;color:var(--gd)}.primary .ar{color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.tile{background:#fff;border:1px solid #e5ded3;border-radius:20px;padding:16px 13px;text-decoration:none;color:var(--ink)}.tile i{font-style:normal;font-size:1.55rem}.tile b{display:block;margin-top:7px;font-size:.88rem}.tile span{font-size:.72rem;color:var(--m)}
+.qr{background:#fff;border-radius:25px;padding:18px;text-align:center;border:1px solid #e0e8d8;box-shadow:0 16px 40px #473a201f}.qr img{width:190px;height:190px;max-width:65%;display:block;margin:10px auto}.qr h2{font-size:1.22rem;color:var(--gd);margin:2px 0 5px}.qr p{margin:0;color:var(--m);font-size:.8rem;line-height:1.45}.pill{display:inline-block;margin-top:11px;padding:6px 10px;border-radius:999px;background:var(--gs);color:var(--gd);font-size:.7rem;font-weight:900}
+.info{background:#fff;border-radius:25px;padding:16px;border:1px solid #e5ded3}.row{display:flex;gap:11px;padding:11px 2px;border-bottom:1px solid #eee9e0}.row:last-child{border:0}.row .i{width:27px;text-align:center}.row b{display:block;font-size:.84rem}.row span,.row a{font-size:.77rem;color:var(--m);text-decoration:none;line-height:1.4}
+footer{text-align:center;color:var(--m);font-size:.7rem;padding:23px 5px}footer b{color:var(--gd)}.sticky{position:fixed;bottom:11px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px),650px);background:#4f7d27;color:#fff;text-align:center;text-decoration:none;font-weight:900;padding:13px;border-radius:17px;box-shadow:0 12px 30px #32411955}
+@media(max-width:430px){.wrap{padding-left:10px;padding-right:10px}.hero{border-radius:28px}}
 </style>
 </head>
 <body>
-<main class="page">
+<main class="wrap">
 <section class="hero">
-<img class="logo" src="logo-saborear-t.png" alt="Logo Saborear-T">
-<div class="eyebrow">Bienvenido a</div>
-<h1>Saborear-T</h1>
-<p class="tagline">Pizza, ensaladas, pastas, hamburguesas, snacks y mucho más.<br>¡Sabor que te hace volver!</p>
-<div class="location-pill">📍 Coacalco, Estado de México</div>
-<div class="actions">
-<a class="card main" href="https://cafexpres91-cyber.github.io/Saborear-T/" target="_blank" rel="noopener">
-<div class="icon">🍕</div><div class="copy"><strong>Menú y pedidos</strong><span>Consulta nuestro menú y realiza tu pedido en línea</span></div><div class="arrow">›</div></a>
-<a class="card instagram" href="https://www.instagram.com/_saborear.t_?igsi=cTJjdGk2dmVlMGE5" target="_blank" rel="noopener">
-<div class="icon">📸</div><div class="copy"><strong>Síguenos en Instagram</strong><span>@_saborear.t_ · promociones y novedades</span></div><div class="arrow">›</div></a>
-<a class="card google" href="https://g.page/r/CTMFBJn1rsTTEAE/review" target="_blank" rel="noopener">
-<div class="icon">⭐</div><div class="copy"><strong>Califícanos en Google</strong><span>Tu opinión nos ayuda a seguir mejorando</span></div><div class="arrow">›</div></a>
-<a class="card location" href="https://www.google.com/maps/search/?api=1&query=Saborear-T%2C%20Miguel%20Hidalgo%2019%2C%20Coacalco%2C%20Estado%20de%20M%C3%A9xico" target="_blank" rel="noopener">
-<div class="icon">📍</div><div class="copy"><strong>Cómo llegar</strong><span>Miguel Hidalgo 19, Coacalco, Estado de México</span></div><div class="arrow">›</div></a>
-</div>
+<img class="logo" src="logo-saborear-t.png" alt="Saborear-T">
+<div class="k">Tarjeta digital</div><h1>Saborear-T</h1><div class="s">Sabor que te hace volver</div>
+<p class="a">📍 Coacalco, Estado de México</p>
+<div class="note"><div style="font-size:1.4rem">🍕</div><div><b>Todo Saborear-T en un solo lugar</b><span>Menú · Pedidos · WhatsApp · Instagram · Google · Ubicación</span></div></div>
 </section>
-<div class="section-title">Visítanos</div>
+
+<div class="t">Lo más importante</div>
+<section class="actions">
+<a class="action primary" href="https://cafexpres91-cyber.github.io/Saborear-T/" target="_blank"><div class="ico">🍕</div><div class="txt"><b>ORDENA AHORA</b><span>Consulta el menú y realiza tu pedido</span></div><div class="ar">›</div></a>
+<a class="action" href="https://wa.me/525528578757" target="_blank"><div class="ico">💬</div><div class="txt"><b>WHATSAPP</b><span>Haz tu pedido o contáctanos directamente</span></div><div class="ar">›</div></a>
+<a class="action" href="https://g.page/r/CTMFBJn1rsTTEAE/review" target="_blank"><div class="ico">⭐</div><div class="txt"><b>CALIFÍCANOS EN GOOGLE</b><span>Tu comentario nos ayuda muchísimo</span></div><div class="ar">›</div></a>
+<a class="action" href="https://www.instagram.com/_saborear.t_?igsi=cTJjdGk2dmVlMGE5" target="_blank"><div class="ico">📸</div><div class="txt"><b>SÍGUENOS EN INSTAGRAM</b><span>@_saborear.t_ · promociones y novedades</span></div><div class="ar">›</div></a>
+<a class="action" href="https://www.google.com/maps/search/?api=1&query=Saborear-T%2C%20Miguel%20Hidalgo%2019%2C%20Coacalco%2C%20Estado%20de%20M%C3%A9xico" target="_blank"><div class="ico">📍</div><div class="txt"><b>CÓMO LLEGAR</b><span>Miguel Hidalgo 19, Coacalco</span></div><div class="ar">›</div></a>
+</section>
+
+<div class="t">Descubre Saborear-T</div>
+<section class="grid">
+<a class="tile" href="https://cafexpres91-cyber.github.io/Saborear-T/" target="_blank"><i>📋</i><b>Menú</b><span>Conoce nuestros platillos</span></a>
+<a class="tile" href="https://www.instagram.com/_saborear.t_?igsi=cTJjdGk2dmVlMGE5" target="_blank"><i>🔥</i><b>Promociones</b><span>Novedades y especiales</span></a>
+<a class="tile" href="https://wa.me/525528578757" target="_blank"><i>💬</i><b>WhatsApp</b><span>Escríbenos directamente</span></a>
+<a class="tile" href="https://g.page/r/CTMFBJn1rsTTEAE/review" target="_blank"><i>💚</i><b>Tu opinión</b><span>Ayúdanos a mejorar</span></a>
+</section>
+
+<div class="t">Horario de atención</div>
 <section class="info">
-<div class="info-row"><div class="info-icon">📍</div><div><strong>Ubicación</strong><span>Miguel Hidalgo 19, San Francisco Coacalco, Estado de México, C.P. 55700</span></div></div>
-<div class="info-row"><div class="info-icon">📞</div><div><strong>Teléfono</strong><a href="tel:+525528578757">55 2857 8757</a></div></div>
-<div class="info-row"><div class="info-icon">🕐</div><div><strong>Horario</strong><span>Consulta el horario actualizado antes de visitarnos.</span></div></div>
+<div class="row"><div class="i">🕐</div><div><b>Miércoles a domingo</b><span>11:00 a 20:00 hrs</span></div></div>
+<div class="row"><div class="i">🚫</div><div><b>Lunes y martes</b><span>Cerrado</span></div></div>
 </section>
-<footer class="footer"><div class="brand">SABOREAR-T</div>Sabor que te hace volver · Gracias por elegirnos.</footer>
+
+<div class="t">Visítanos</div>
+<section class="info">
+<div class="row"><div class="i">📍</div><div><b>Ubicación</b><span>Miguel Hidalgo 19, San Francisco Coacalco, Estado de México, C.P. 55700</span></div></div>
+<div class="row"><div class="i">📞</div><div><b>Teléfono</b><a href="tel:+525528578757">55 2857 8757</a></div></div>
+</section>
+<footer><b>SABOREAR-T</b><br>Sabor que te hace volver · Gracias por elegirnos.</footer>
 </main>
-</body>
-</html>
+<a class="sticky" href="https://cafexpres91-cyber.github.io/Saborear-T/" target="_blank">🍕 ORDENAR AHORA</a>
+</body></html>
